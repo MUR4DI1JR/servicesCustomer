@@ -16,7 +16,8 @@ const Home = ({location, next, code, nextClick, currentUser}) => {
         <div className={s.home}>
             <Sidebar/>
                 {
-                    next ? <Property/> :
+                    next ?
+                        <Property/> :
                         <div className={s.block}>
                             <Address/>
                             <div className={s.confirm}>
