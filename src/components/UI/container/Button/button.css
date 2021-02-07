@@ -1,0 +1,47 @@
+.Button{
+    width: 150px;
+    text-align: center;
+    background-color: #00c397;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.Button:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.Success {
+    background: #00c397;
+    color: #ffffff;
+}
+.Success a{
+    color: #fff;
+    text-decoration: none;
+}
+.disable {
+    border: none;
+    background: grey;
+    color: #fff;
+    cursor: auto;
+}
+.disable a{
+    text-decoration: none;
+    color: #fff;
+    cursor: auto;
+}
+.back{
+    background: #fff;
+    color: black;
+    border: 1px solid #a3b4c2;
+}
+.back:hover{
+    border: 2px solid #a3b4c2;
+}
