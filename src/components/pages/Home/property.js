@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from "react-router-dom";
 
-import s from './property.module.css';
+import './property.css';
 import Buttons from "../../UI/container/Button/buttons";
 import RadioCheck from "../../UI/container/radio/radioCheck";
 import {
@@ -44,10 +44,10 @@ const Property = ({ aboutProperty, typeProperty, countUnit, investValue,homeValu
 
 
     return (
-        <div className={s.property}>
-            <div className={s.item}>
+        <div className="property">
+            <div className="item">
                 <h1>Tell us more about the property you are refinancing</h1>
-                <div className={s.modes}>
+                <div className="modes">
                     <form>
                         <RadioCheck name="refinancing" title="Primary check" value="primaryResidence" forHtml="primaryCheck" change={aboutPropertyHandle}/>
                         <RadioCheck name="refinancing" title="Second home" value="secondHome" forHtml="secondHome" change={aboutPropertyHandle}/>
@@ -55,9 +55,9 @@ const Property = ({ aboutProperty, typeProperty, countUnit, investValue,homeValu
                     </form>
                 </div>
             </div>
-            {aboutProperty !== '' ? <div className={s.item}>
+            {aboutProperty !== '' ? <div className="item">
                 <h1>What property type would this be?</h1>
-                <div className={s.modes}>
+                <div className="modes">
                     <form>
                         <RadioCheck name="propertyType" title="Single Family" value="singleFamily" forHtml="singleFamily" change={typePropertyHandle}/>
                         <RadioCheck name="propertyType" title="Townhouse or Condo" value="condo" forHtml="condo" change={typePropertyHandle}/>
@@ -68,9 +68,9 @@ const Property = ({ aboutProperty, typeProperty, countUnit, investValue,homeValu
             </div>: null}
             {typeProperty === '2to4units' ?
                 <div>
-                    <div className={s.item}>
+                    <div className="item">
                         <h1>How many units will the property have?</h1>
-                        <div className={s.modes}>
+                        <div className="modes">
                             <form>
                                 <RadioCheck name="numberOfUnits" title="2 Units" value="2" forHtml="2" change={countUnitHandle}/>
                                 <RadioCheck name="numberOfUnits" title="3 Units" value="3" forHtml="3" change={countUnitHandle}/>
@@ -83,30 +83,30 @@ const Property = ({ aboutProperty, typeProperty, countUnit, investValue,homeValu
                 null
             }
             {aboutProperty === 'Investment' ?
-                <div className={`${s.item} ${s.investValue}`}>
+                <div className="item investValue">
                     <h1>What's the expected monthly rental income?</h1>
-                    <div className={s.finance}>
-                        <div className={s.markFinance}>
+                    <div className="finance">
+                        <div className="markFinance">
                             <span>$</span>
                             <input type="tel"  onChange={investValueHandle} value={getValue(investValue)}/>
                         </div>
-                        {investValue.trim() ? null: <p className={s.errorValue}>Invalid amount.</p>}
+                        {investValue.trim() ? null: <p className="errorValue">Invalid amount.</p>}
                         <p>This rental income must appear on a lease agreement or on your tax return. If it doesn't, please enter $0.</p>
                     </div>
                 </div> : null
             }
-            {typeProperty !== '' ? <div className={s.item}>
+            {typeProperty !== '' ? <div className="item">
                 <h1>Estimated home value</h1>
-                <div className={s.finance}>
-                    <div className={`${s.markFinance} ${s.userValue}`}>
+                <div className="finance">
+                    <div className="markFinance userValue">
                         <span>$</span>
                         <input type="tel" onChange={homeValueHandle} value={getValue(homeValue)}/>
                     </div>
-                    {homeValue.length < 5 ? <p className={s.errorValue}>Value must be more than $10,000.</p> : null}
+                    {homeValue.length < 5 ? <p className="errorValue">Value must be more than $10,000.</p> : null}
                     <p>For example: $250,000</p>
                 </div>
             </div>: null}
-            <div className={s.confirm}>
+            <div className="confirm">
                 <Buttons clicked={backClick} btnType="back">Previous</Buttons>
                 <Buttons btnType={homeValue.length < 5 ? "disable" : "Success"}><NavLink to="/send-email">Next</NavLink></Buttons>
             </div>

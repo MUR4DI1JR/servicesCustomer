@@ -1,0 +1,65 @@
+.form_task{
+    margin: 200px 0 0 0;
+}
+.question h1{
+    margin: 5px 0;
+    font-size: 45px;
+    width: 95%;
+    font-weight: bolder;
+    color: hsl(263deg 47% 18%);
+    line-height: 1;
+}
+.question p{
+    margin: 25px 0;
+}
+.input_block{
+    display: flex;
+}
+.input_block p{
+    margin: 0;
+}
+.input_item{
+    display: block;
+    margin-right: 8%;
+    width: 100%;
+}
+.input_item p{
+    margin: 0;
+}
+.input_items{
+    display: flex;
+    width: 100%;
+}
+.input_item_1{
+    width: 72%;
+    margin-right: 5%;
+}
+.input_item_2{
+    width: 72%;
+    margin-right: 5%;
+}
+.input_item_3{
+    width: 60%;
+}
+.input_items p{
+    margin: 0;
+}
+
+@media screen  and (max-width: 990px){
+    .input_block{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .input_item {
+        width: 90%;
+    }
+    .unit_input{
+        width: 100%;
+    }
+    .input_items{
+        flex-wrap: wrap;
+    }
+    .input_item_3 {
+        width: 72%;
+    }
+}

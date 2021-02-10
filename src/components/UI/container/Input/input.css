@@ -1,7 +1,7 @@
 .Input{
     margin: 10px 40px 10px 0;
     padding: 5px 20px;
-    width: 600px;
+    width: 100%;
     height: 30px;
     border: 1px solid #818587;
     border-radius: 3px;
@@ -15,18 +15,32 @@
     border: 1px solid red;
 }
 .city{
-    width: 260px;
+    width: 90%;
 }
 .state{
-    width: 260px;
+    width: 90%;
 }
 .code{
-    width: 125px;
+    width: 40%;
 }
 .unit{
-    width: 125px;
+    width: 40%;
 }
 .email{
     width: 300px;
     padding: 5px 5px;
+}
+@media screen and (max-width: 990px){
+    .unit{
+        width: 90%;
+    }
+    .city{
+        width: 125%;
+    }
+    .state{
+        width: 125%;
+    }
+    .code{
+        width: 125%;
+    }
 }
