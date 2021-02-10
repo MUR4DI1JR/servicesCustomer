@@ -4,9 +4,11 @@ import {connect} from  'react-redux';
 import './sidebar.css';
 import logo from "../../../assets/better-logo.svg";
 import roofIcon from "../../../assets/roof-icon.png";
+import {NavLink} from "react-router-dom";
+import {auth} from "../../../config/firebaseConfig";
 
 
-const Sidebar = ({location, city}) => {
+const Sidebar = ({location, city, currentUser}) => {
     const [active, setActive] = useState(true);
 
     const showSideBar = (e) => {
@@ -39,6 +41,10 @@ const Sidebar = ({location, city}) => {
                         }
                     </div>
                 </div>
+                <div className="link">
+                    {currentUser === null ? <NavLink to="/sign-in">Sign in</NavLink> :
+                        <button onClick={() => auth.signOut()}>sign out</button>}
+                </div>
             </div>
         </div>
     );
@@ -46,7 +52,8 @@ const Sidebar = ({location, city}) => {
 
 const mapStateToProps = state =>({
     location: state.location.location,
-    city: state.location.city
+    city: state.location.city,
+    currentUser: state.auth.currentUser
 });
 
 export default connect(mapStateToProps)(Sidebar);

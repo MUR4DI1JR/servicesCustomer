@@ -1,5 +1,9 @@
+.block{
+    height: 100vh;
+    margin-left: 10%;
+}
 .form_task{
-    margin: 200px 0 0 0;
+    margin: 150px 0 0 0;
 }
 .question h1{
     margin: 5px 0;
@@ -31,12 +35,12 @@
     width: 100%;
 }
 .input_item_1{
-    width: 72%;
-    margin-right: 5%;
+    width: 95%;
+    margin-right: 4%;
 }
 .input_item_2{
-    width: 72%;
-    margin-right: 5%;
+    width: 95%;
+    margin-right: 4%;
 }
 .input_item_3{
     width: 60%;
@@ -46,9 +50,13 @@
 }
 
 @media screen  and (max-width: 990px){
+    .question h1{
+        font-size: 25px;
+        width: 100%;
+    }
     .input_block{
         flex-wrap: wrap;
-        width: 100%;
+        width: 90%;
     }
     .input_item {
         width: 90%;
@@ -58,6 +66,13 @@
     }
     .input_items{
         flex-wrap: wrap;
+        width: 90%;
+    }
+    .input_item_1{
+        width: 72%;
+    }
+    .input_item_2{
+        width: 72%;
     }
     .input_item_3 {
         width: 72%;

@@ -45,3 +45,10 @@
 .back:hover{
     border: 2px solid #a3b4c2;
 }
+
+@media screen and (max-width: 520px){
+    .Button:first-of-type {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+}

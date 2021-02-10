@@ -1,5 +1,7 @@
 .property{
+    width: 90%;
     margin-top: 150px;
+    margin-left: 15%;
 }
 .item{
     display: block;
@@ -11,7 +13,7 @@
 .item h1{
     margin: 10px 0;
     font-size: 45px;
-    width: 850px;
+    width: 115%;
     font-weight: bolder;
     color: hsl(263deg 47% 18%);
     line-height: 1;
@@ -33,7 +35,7 @@
 }
 .markFinance{
     margin-top: 15px;
-    width: 380px;
+    width: 50%;
     padding: 8px 10px 8px 10px;
     display: flex;
     border: 1px solid #dcdce3;
@@ -61,4 +63,24 @@
 }
 .errorValue{
     color: #ff3369 !important;
+}
+
+@media screen and (max-width: 990px){
+    .property{
+        width: 70%;
+        margin-top: 100px;
+    }
+    .item h1{
+        font-size: 25px;
+        width: 120%;
+    }
+}
+@media screen and (max-width: 520px){
+    .confirm{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .userValue{
+        width: 51%;
+    }
 }

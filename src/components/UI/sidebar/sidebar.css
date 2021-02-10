@@ -1,10 +1,10 @@
 .menu{
-    width: 100vw;
+    width: 34%;
 }
 .side_bar{
-    width: 31%;
+    width: 91%;
     background-color: hsl(263deg 47% 18%);
-    height: 100vh;
+    height: 164vh;
 }
 .burger-btn{
     position: absolute;
@@ -60,7 +60,8 @@
     color: #fff;
 }
 .item_sidebar{
-    margin: 10px 15px;
+    margin: 5px 0;
+    padding: 5px 5px;
     width: 155%;
     display: flex;
 }
@@ -104,15 +105,36 @@
 .wallpaper:hover{
     cursor: pointer;
 }
+.link{
+    padding: 10px 5px;
+    width: 290px;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+}
+.link a{
+    padding-left: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #b94aed;
+}
 @media screen and (max-width: 1000px) {
     .item_sidebar{
-        margin: 10px 5px;
+        padding: 10px 5px;
     }
     .item_sidebar img{
         height: 35px;
     }
 }
 @media screen and (max-width: 990px) {
+    .menu {
+        width: 8%;
+    }
     .side_bar_box{
         display: flex;
     }
@@ -120,7 +142,7 @@
         left: 0;
     }
     .side_bar{
-        transform: translateX(-500px);
+        transform: translateX(-350px);
         transition: 0.5s;
     }
     .side_bar-active{
@@ -142,11 +164,20 @@
         width: 35px;
     }
     .burger-btn {
-        top: -5px;
-        left: 555px;
+        top: 5px;
+        left: 405px;
     }
     .burger-btn-active{
         left: 315px;
         transition: 0.5s;
+    }
+    .link{
+        display: block;
+    }
+}
+@media screen and (max-width: 500px){
+    .burger-btn {
+        top: 5px;
+        left: 385px;
     }
 }
