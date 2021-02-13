@@ -4,7 +4,7 @@
 .side_bar{
     width: 91%;
     background-color: hsl(263deg 47% 18%);
-    height: 164vh;
+    height: 100vh;
 }
 .burger-btn{
     position: absolute;
@@ -179,5 +179,27 @@
     .burger-btn {
         top: 5px;
         left: 385px;
+    }
+}
+@media screen and (max-width: 440px){
+    .side_bar {
+        transform: translateX(-200px);
+        transition: 0.5s;
+    }
+    .burger-btn {
+        top: 5px;
+        left: 245px;
+    }
+    .side_bar-active {
+        margin: 0;
+        transform: translateX(0);
+        width: 200px;
+        transition: 0.5s;
+    }
+    .item_sidebar {
+        width: 190px;
+    }
+    .link{
+        width: 190px;
     }
 }
